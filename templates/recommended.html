@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie Recommendation System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #F5F5F5;
+      }
+      header {
+        background-color: #1E90FF;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 36px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .movie-container {
+        display: flex;
+        margin-bottom: 20px;
+      }
+      .poster {
+        margin-right: 20px;
+        width: 200px;
+        height: 300px;
+        border-radius: 10px;
+      }
+      .movie-info {
+        flex-grow: 1;
+      }
+      .movie-title {
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      .movie-synopsis {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><span id="home-link">Movie Recommendation System</span></h1>
+    </header>
+    <div class="container">
+      <h1>Similar Movies</h1>
+      {% for idx, movie in enumerate(movies) %}
+      <div class="movie-container">
+        <a href="{{ movie[1] }}" target="_blank">
+          <img class="poster" src="{{ posters[idx] }}" alt="{{ movie[0] }} poster">
+        </a>
+        <div class="movie-info">
+          <h2 class="movie-title">{{ movie[0] }}</h2>
+          <p class="movie-synopsis">{{ movie[2] }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <script>
+      const homeLink = document.getElementById("home-link");
+      homeLink.addEventListener("click", () => {
+        window.location.href = "/";
+      });
+    </script>
+  </body>
+</html>
