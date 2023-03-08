@@ -14,3 +14,8 @@ The user interface for the recommendation system was built using the Flask web f
 Overall, this project demonstrates the use of machine learning and collaborative filtering techniques in building a movie recommendation system, which can provide users with personalized movie recommendations based on their past movie ratings.
 
 ![image](https://user-images.githubusercontent.com/120294776/221744691-75d4eb82-31ad-4883-be8a-df0f10c90c12.png)
+
+
+
+Credits:
+https://github.com/kishan0725/AJAX-Movie-Recommendation-System-with-Sentiment-Analysis/ (Dataset)
